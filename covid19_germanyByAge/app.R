@@ -226,6 +226,7 @@ ui <- pageWithSidebar(
         numericInput('rollingwindow', 'Rolling average (days)', 7, min = 1, max = 28),
         selectInput('align_direction', 'Rolling average type', align_direction),
         selectInput('excludeunknown', 'Exclude unknown ages', c("yes", "no")),
+        selectInput('logy', 'Logarithmic scale', c("yes", "no")),
         p("Resize browser window to resize plot, click on legend to show/hide lines."),
         p("Dates refer to the time reported by the RKI."),
         br(),
@@ -270,7 +271,7 @@ server <- function(input, output, session) {
     
             p1 = ggplot(selectedData(), aes(Date, rolling_value, color = age_group )) + geom_line() + facet_wrap(~location_name,scales = "free") + scale_y_log10(breaks = log_breaks(10) , label = label_comma(accuracy = 1)) + theme(axis.text.x = element_text(angle = 90, vjust = 0.4)) + theme_pander() +
             scale_x_date(breaks = date_breaks(width = "1 week")) + ylab(paste0(unique(selectedData()$variable2))) + xlab("") + labs(color = "Age Group")
-        
+            if(input$logy=="no") {p1 = p1 + scale_y_continuous(breaks = pretty_breaks(10))}  else {p1 = p1 + scale_y_log10(breaks = log_breaks(10) , label = label_comma(accuracy = 1))}
         ggplotly(p1)
     })
     

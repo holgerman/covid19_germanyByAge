@@ -5,8 +5,8 @@ account: holgerman
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3789132
-bundleId: 4344311
+bundleId: 4347321
 url: https://holgerman.shinyapps.io/covid19_germanyByAge/
-when: 1615761433.76265
+when: 1615807753.08965
 asMultiple: FALSE
 asStatic: FALSE
