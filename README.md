@@ -5,3 +5,6 @@ Interactive visualisation available at the Leipzig Health Atlas [here](https://w
 
 This work was done as part of the NFDI4Health Task Force COVID-19 (nfdi4health.de). We gratefully acknowledge the financial support of the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – Project Number 451265285.
 
+
+
+![nfdi4health.de](https://github.com/holgerman/covid19_germanyByAge/raw/main/covid19_germanyByAge/WWW/nfdi4healthlogo.png)
