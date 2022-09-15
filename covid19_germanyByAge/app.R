@@ -230,8 +230,7 @@ ui <- pageWithSidebar(
         p("Resize browser window to resize plot, click on legend to show/hide lines."),
         p("Dates refer to the time reported by the RKI."),
         br(),
-        img(src = "genstat_twitter.png", height = 90, width = 90),
-        br(),
+       
         p("...proudly presented by ",
           a("IMISE/GenStat", 
             href = "http://www.imise.uni-leipzig.de/en/Groups/GenStat/"),
@@ -248,6 +247,7 @@ ui <- pageWithSidebar(
           "We gratefully acknowledge the financial support of the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) – Project Number 451265285.", 
           ),
         img(src = "https://github.com/holgerman/covid19_germanyByAge/raw/main/covid19_germanyByAge/WWW/nfdi_4_health_logo-task-force__850x331.jpg", height = 33*2.7, width = 85*2.7),
+        img(src = "genstat_twitter.png", height = 90, width = 90),
         br(),
         p("Code available on ",
           a("GitHub", 
